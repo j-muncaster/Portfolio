@@ -1,21 +1,57 @@
-# Muncaster_Josephine_Portfolio
-This is a repo for my Portfolio Assignment - Level 3 of IDP.
+# The Portfolio of Jo Muncaster - UX | UI Designer & Front End Developer 💻
 
-## Installation
-There is no installation process required. Simply download the files to your computer.
+This portfolio showcases my work as a UX/UI designer and front-end developer, highlighting projects that combine user-centered design with clean, responsive code. This site demonstrates my ability to create intuitive, visually appealing interfaces across devices while presenting my design process and technical skills to potential employers.
 
-## Usage
+## Table of Contents 📋
+[About](#about)<br/>
+[Skills](#skills)<br/>
+[Languages](#languages)<br/>
+[Features](#features)<br/>
+[Contact](#contact)<br/>
+[Installation](#installation)<br/>
+[Usage](#usage)<br/>
+[Contributing](#contributing)<br/>
+[License](#licence)<br/>
+
+## About 🌼 <a id="about"></a>
+
+I’m a Filipina-Canadian UX/UI Designer and Front-End Developer passionate about clean design, code, and human-centered solutions. I thrive at the intersection of logic and creativity, crafting responsive interfaces and intuitive user flows with care and precision. Outside of work, I love exploring new trails, diving into a good book, or immersing myself in video games — always bringing curiosity and heart to everything I do.
+
+## Skills ✒️ <a id="skills"></a>
+Languages : HTML5, CSS3, Javascript
+Frameworks & Libraries : GreenSock
+Tool : GitHub, Figma, Photoshop, Illustrator, After Effects, Premiere Pro, Cinema 4D, 3DS Max
+Technologies : Responsive Design
+
+## Features ✨ <a id="features"></a>
+Fully Responsive
+Valid HTML5 & CSS3
+GreenSock Animations
+
+## Contact ✉️ <a id="contact"></a>
+Feel free to reach out if you’d like to collaborate or have any questions!
+
+LinkedIn: [Jo Muncaster](https://www.linkedin.com/in/josephine-muncaster-382674135/)
+jomuncaster.contact@gmail.com
+
+Thank you for visiting my portfolio!
+
+## Installation 📦 <a id="installation"></a>
+To run the portfolio locally:
+
+    Clone this repository
+    Navigate into the project directory:
+    Open the index.html file in your browser, or if using a local server, start the server and navigate to localhost to view.
+
+## Usage 🌱 <a id="usage"></a>
 Open index.html in your browser of choice.
 
-## Contributing
+## Contributing 💞 <a id="contributing"></a>
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Credits
-Josephine Muncaster
-
-## License
+## License <a id="licence"></a>
 MIT - See included license file.

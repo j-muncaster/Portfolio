@@ -1,1 +1,42 @@
 @use '../abstracts';
+
+/* Header Styling */
+#main-header {
+  background-color: #F26430;
+  height: 80px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 60px;
+  width: auto;
+}
+
+#nav-links a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#nav-links a::after {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #F2F2F2;
+  transition: width 0.3s ease;
+}
+
+#nav-links a:hover::after {
+  width: 100%;
+}
