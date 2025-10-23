@@ -7,6 +7,7 @@ There is no installation process required. Simply download the files to your com
 ## Usage
 Open index.html in your browser of choice.
 
+<<<<<<< Updated upstream
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -18,4 +19,7 @@ Open index.html in your browser of choice.
 Josephine Muncaster
 
 ## License
+=======
+## License <a id="licence"></a>
+>>>>>>> Stashed changes
 MIT - See included license file.
