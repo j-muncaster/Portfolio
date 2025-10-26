@@ -3,9 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/grid.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+>>>>>>> Stashed changes
     <title>Josephine Muncaster's Portfolio</title>
 </head>
+
 <body>
+<<<<<<< Updated upstream
     
+=======
+    <h1 class="hidden">Welcome to Jo Muncaster's Portfolio</h1>
+
+    <!-- Main Nav -->
+        <div id="nav-con">
+            <header class="grid-con" id="main-header">
+                <nav id="main-nav">
+                        <h2 class="hidden">Main Navigation</h2>
+                        <button id="button"></button>
+                        <div id="burger-con">
+                            <ul>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+            </header>
+        </div>
+
+    <!-- Hero Section -->
+        <section id="hero" class="full-width-grid-con">
+            <h2 class="hidden">Portfolio Hero Section</h2>
+            <img
+                sizes="100vw"
+                srcset="
+                images/
+                "
+                src="images/" 
+            alt="Hero Image" id="hero-main">
+
+            <img src="images/" alt="Jo Muncaster Logo">
+
+            <div class="grid-con">
+                <div id="text-hero">
+                    <p>UX | UI Designer & Developer</p>
+                </div>
+            </div>
+
+            <div class="grid-con">
+                <div id="explore-hero">
+                    <p>Explore my projects</p>
+                    <img src="images/" alt="Arrow Icon">
+                </div>
+            </div>
+        </section>
+
+    <!-- Video Player -->
+        <div class="grid-con">
+            <section id="player-container" class="col-span-full">
+                <video controls preload="metadata" poster="images/placeholder.jpg">
+                    <source src="video/video.mp4" type="video/mp4">
+                    <source src="video/video.webm" type="video/webm">
+                    <p>You are using an older browser that does not support HTML5 Video. Please update your browser.</p>
+                </video>
+                <div class="video-controls" id="video-controls">
+                    <button id="play-button">
+                        <i class="fa fa-play-circle-o"></i>
+                    </button>
+                    <button id="pause-button">
+                        <i class="fa fa-pause-circle-o"></i>
+                    </button>
+                    <button id="stop-button">
+                        <i class="fa fa-stop-circle-o"></i>
+                    </button>
+                    <i class="fa fa-volume-up"></i>
+                    <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+                    <button id="full-screen">
+                        <i class="fa fa-arrows-alt"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+    <!-- Projects Section -->
+        <section class="projects">
+            <h2 class="hidden">Projects Section</h2>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/" alt="Photo of Project 1">
+                    <span class="project-number">1</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/" alt="Photo of Project 2">
+                    <span class="project-number">2</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/" alt="Photo of Project 3">
+                    <span class="project-number">3</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/" alt="Photo of Project 4">
+                    <span class="project-number">4</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="images">
+                    <img src="placeholder.jpg" alt="Photo of Project 5">
+                    <span class="project-number">5</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="images">
+                    <img src="placeholder.jpg" alt="Photo of Project 6">
+                    <span class="project-number">6</span>
+                </div>
+
+                <div class="project-info">
+                    <h3>Project Name</h3>
+                        <p>Brief Description</p>
+                    <a href="#" class="project-link">
+                        <img src="icons/" alt="Arrow Icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+        <footer id="footer-hero">
+            <div class="grid-con">
+                <nav id="footer-nav">
+                    <h2 class="hidden">Footer Nav</h2>
+                        <img src="images/" alt="J Logo">
+
+                        <ul>
+                            <li><a class="#">Projects</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                </nav>
+
+                <div id="footer-icons">
+                    <img src="images/" alt="Instagram Logo">
+                    <img src="images/" alt="LinkedIn Logo">
+                    <img src="images/" alt="GitHub Logo">
+                </div>
+
+                <div id="footer-privacy">
+                    <p id="policy">© All Rights Reserved 2025 | Jo Muncaster</p>
+                </div>
+            </div>
+        </footer>
+
+    <script src="js/main.js"></script>
+>>>>>>> Stashed changes
 </body>
 </html>
