@@ -13,19 +13,27 @@
     <h1 class="hidden">Welcome to Jo Muncaster's Portfolio</h1>
 
     <!-- Main Nav -->
-        <div id="nav-con">
-            <header class="grid-con" id="main-header">
-                <nav id="main-nav">
-                        <h2 class="hidden">Main Navigation</h2>
-                        <button id="button"></button>
-                        <div id="burger-con">
-                            <ul>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+
+    <div id="sticky-nav-con">
+            <header id="main-nav">
+                <h2 class="hidden">Main Navigation</h2>
+
+                <button id="button" class="col-span-1"></button>
+                
+                <div id="logo">
+                    <img src="images/logo.svg" alt="J Muncaster Logo">
+                </div>
+
+                <nav>
+                    <h2 class="hidden">Links Nav</h2>
+                    <div id="burger-con">
+                        <ul>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </header>
         </div>
 
@@ -100,6 +108,11 @@
                         <img src="icons/" alt="Arrow Icon">
                     </a>
                 </div>
+            </div>
+
+            <div class="lightbox" id="lightbox1">
+                <span class="close">&times;</span>
+                <img class="lightbox-image" src="" alt="Expanded project image">
             </div>
 
             <div class="project-card">

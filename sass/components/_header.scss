@@ -1,42 +1,130 @@
 @use '../abstracts';
 
-/* Header Styling */
-#main-header {
-  background-color: #F26430;
-  height: 80px;
-  padding: 0px;
-  margin: 0px;
+#main-nav button {
+  width: 28px;
+  height: 28px;
+  background: url(../images/hamburger_menu.png) no-repeat center;
+  transition: all .5s ease;
+  border: 0;
+  cursor: pointer;
+  justify-self: start;
+}
+
+#main-nav button.expanded {
+   transform: rotate(90deg);
 }
 
 #main-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 120px 1fr auto 50px;
   align-items: center;
-  justify-content: space-between;
-}
-
-#logo {
-  height: 60px;
-  width: auto;
-}
-
-#nav-links a {
+  padding: 15px;
+  background-color: #F24F13;
   position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  z-index: 2;
 }
 
-#nav-links a::after {
+#burger-con {
+  display: none;
   position: absolute;
+  top: 100%;
   left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: #F2F2F2;
-  transition: width 0.3s ease;
+  width: 100%;
+  background: #F24F13;
+  z-index: 1;
 }
 
-#nav-links a:hover::after {
-  width: 100%;
+#burger-con.slide-toggle {
+  display: block;
+}
+
+#main-nav ul li a:hover {
+  color: #F24f13;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  color: #F2F2F2;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#main-nav ul li:last-child {
+  margin-bottom: 10px;
+}
+
+#logo img {
+  grid-column: 1 / 2;
+  max-height: 60px;
+  width: auto;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  
+  #sticky-nav-con {
+    position: sticky;
+    top: 0px;
+    background-color: #F24F13;
+    z-index: 1;
+  }
+
+   #main-nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+
+   #main-nav ul li a {
+    display: inline;
+  }
+
+   #button {
+    display: none;
+  }
+
+   #logo {
+    grid-column: 1 / span 3;
+    order: -1;
+    margin-top: 15px;
+    max-width: 200px;
+  }
+
+   #burger-con {
+    grid-column: 4 / span 7;
+    display: block;
+    top: 45%;
+  }
+
+  #burger-con ul {
+    display: flex;
+    padding: 0;
+  }
+
+  #burger-con ul li {
+   list-style: none;
+   padding-right: 10px;
+   margin: 0px auto;
+  }
+
+   #burger-con ul li:last-child {
+    padding-right: 0;
+  }
+
+  #burger-con ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    color: #f2f2f2;
+  }
 }
