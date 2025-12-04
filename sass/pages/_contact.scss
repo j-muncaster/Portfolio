@@ -1,0 +1,33 @@
+@use '../abstracts';
+@use '../base';
+@use '../components';
+
+// #contact-form input, #contact-form textarea {
+//     display: block;
+//     border: solid 1px #d5d5d5;
+//     padding: 20px;
+//     width: 90%;
+//     margin-top: 10px;
+//     margin-bottom: 30px;
+//     border-radius: 15px;
+// }
+
+// #contact-form textarea {
+//     height: 200px; 
+// }
+
+// #contact-form #submit {
+//     background-color: abstracts.$secondary-color;
+//     color: #fff;
+//     @include abstracts.transition;
+//     border-radius: 50px;
+//     &:hover {
+//         filter: saturate(120%);
+//     }
+// }
+
+// @media screen and (min-width) {
+//     #contact-form #submit {
+//         max-width: 200px;
+//     }
+// }
