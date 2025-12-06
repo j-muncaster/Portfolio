@@ -1,0 +1,79 @@
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#hero {
+    position: relative;
+    background-color: #F2C1AE;
+    overflow: hidden;
+    padding-top: 260px;
+    padding-bottom: 200px;
+    height: 100vh;
+}
+
+#hero-squiggle {
+    position: absolute;
+    top: 1000px;
+    right: 600px;
+    height: 700px;
+    width: auto;
+    transform: rotate(90deg) scaleY(-1);
+    transform-origin: top right;
+    opacity: 0.8;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+#hero-logo {
+    grid-column: 1 / span 6;
+    width: 750px;
+    max-width: 100%;
+    z-index: 5;
+    margin-left: 80px;
+    margin-bottom: none;
+}
+
+#text-hero {
+    grid-column: 1 / span 6;
+    margin-left: 300px;
+    margin-top: -240px;
+    z-index: 5;
+}
+
+#text-hero p {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F24F13;
+    white-space: nowrap;
+}
+
+#explore-hero {
+    grid-column: 1 / span 6;
+    margin-left: 500px;
+    margin-top: 100px;
+    text-align: left;
+    z-index: 5;
+}
+
+#explore-hero p {
+    font-size: 28px;
+    color: #F24F13;
+    margin-top: 250px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.explore-inner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero-arrow {
+    width: 40px;
+    transform: rotate(90deg);
+    margin-top: 10px;
+    margin-left: 400px;
+}
