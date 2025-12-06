@@ -1,1 +1,35 @@
-@use '../abstracts';
+#footer {
+    background-color: #F2C1AE;
+    text-align: center;
+    padding: 40px 20px;
+    color: #3B3B3B;
+    margin-top: 40px;
+}
+
+#footer img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+#social-icons img {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+#footer p {
+    font-size: 14px;
+    font-family: "Questrial";
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+}
