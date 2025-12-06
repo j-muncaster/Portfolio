@@ -14,52 +14,42 @@
 
     <!-- Main Nav -->
 
-    <div id="sticky-nav-con">
-            <header id="main-nav">
-                <h2 class="hidden">Main Navigation</h2>
+    <header id="main-nav">
+        <h2 class="hidden">Main Navigation</h2>
+    
+            <button id="hamburger">
+                <img src="images/hamburger_menu.png" alt="Menu">
+            </button>
 
-                <button id="button" class="col-span-1"></button>
-                
-                <div id="logo">
-                    <img src="images/logo.svg" alt="J Muncaster Logo">
-                </div>
+            <nav class="nav-links">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-                <nav>
-                    <h2 class="hidden">Links Nav</h2>
-                    <div id="burger-con">
-                        <ul>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </div>
+            <div id="mobile-menu">
+                <a href="projects.html">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+    </header>
 
     <!-- Hero Section -->
         <section id="hero" class="full-width-grid-con">
             <h2 class="hidden">Portfolio Hero Section</h2>
-            <img
-                sizes="100vw"
-                srcset="
-                images/
-                "
-                src="images/" 
-            alt="Hero Image" id="hero-main">
 
-            <img src="images/" alt="Jo Muncaster Logo">
+            <img src="images/squiggle-2.svg" id="hero-squiggle" alt="Decorative Shape">
+            <img src="images/logo-colour.svg" alt="Jo Muncaster Logo" id="hero-logo">
 
             <div class="grid-con">
                 <div id="text-hero">
                     <p>UX | UI Designer & Developer</p>
                 </div>
-            </div>
 
-            <div class="grid-con">
-                <div id="explore-hero">
+                <div class="explore-inner" id="explore-hero">
                     <p>Explore my projects</p>
-                    <img src="images/" alt="Arrow Icon">
+                    <img src="images/white_arrow.svg" id="hero-arrow" alt="Arrow Icon">
                 </div>
             </div>
         </section>
