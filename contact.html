@@ -38,35 +38,39 @@
     </header>
 
     <!-- Contact Me Hero Section -->
-        <section id="about" class="full-width-grid-con">
+        <section id="contact-hero" class="col-span-full">
             <h2 class="hidden">Contact Me Hero Section</h2>
-
-            <div class="grid-con background-layer">
-                <img src="images/" alt="Solid Background with Pattern">
-            </div>
+            <div class="solid-banner"></div>
 
             <div class="profile-photo">
-                <img src="images/" alt="Photo of Me">
+                <img src="images/working_shot.jpg" alt="Photo of Me">
             </div>
 
-            <div class="grid-con">
+            <div class="col-span-full intro-text">
                 <h3>Designing with Heart,<br>Connecting Through Experience.</h3>
-                <p>Whether you're looking for a thoughtful UX designer, a detail-oriented front-end developer, 
-                    or a collaborative partner for your next big idea — I’d love to connect.
-                </p>
+                <p>Whether you're looking for a thoughtful UX designer, a detail-oriented front-end developer,
+                    or a collaborative partner for your next big idea — I’d love to connect.</p>
             </div>
         </section>
 
+
     <!-- Contact Form -->
-        <section class="grid-con contact-section">
+        <section id="contact-form-section" class="col-span-full">
             <h2 class="hidden">Contact Form</h2>
-            <div id="contact-form" class="col-span-4 col-start-1">
+            <div class="contact-background-layer"></div>
+
+            <div class="contact-form-wrapper">
                 <form action="#" method="post" enctype="text/plain">
-                    <input name="firstName" type="text" required placeholder="First Name">
-                    <input name="lastName" type="text" required placeholder="Last Name">
+                    <div class="name-fields">
+                        <input name="firstName" type="text" required placeholder="First Name">
+                        <input name="lastName" type="text" required placeholder="Last Name">
+                    </div>
+
                     <input name="contactInfo" type="text" required placeholder="Email Address">
+
                     <textarea name="msg" placeholder="Message"></textarea>
-                    <input name="submit" type="submit" value="Submit">
+
+                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
         </section>

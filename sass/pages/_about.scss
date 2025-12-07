@@ -46,6 +46,7 @@
     height: 280px;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: 0 6px 18px #3B3B3B;
 }
 
 #about h3 {
@@ -92,9 +93,10 @@
         background-image: url("../images/m_pattern_banner.jpg");
     }
 
-    #about .background-layer img {
-        height: 150px;
-        object-fit: cover;
+    .profile-photo {
+        margin-top: -160px;
+        display: flex;
+        justify-content: center;
     }
 
     .profile-photo img {
@@ -102,13 +104,9 @@
         height: 180px;
     }
 
-    .profile-photo {
-        background-image: url("../images/m-headshot.jpg");
-    }
-
     #about h3 {
         font-size: 26px;
-        margin-top: 150px;
+        margin-top: 30px;
     }
 
     #about p {
