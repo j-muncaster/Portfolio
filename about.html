@@ -10,20 +10,31 @@
 </head>
 <body>
     <h1 class="hidden">About Me Page</h1>
+    <header id="main-nav" class="inner-header">
 
-    <!-- Main Nav -->
-        <div id="nav-con">
-            <header class="grid-con" id="main-header">
-                <nav id="main-nav" class="col-span-full">
-                <img src="images/logo.png" alt="J Muncaster Logo" id="logo">
-                <ul id="nav-links">
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                </nav>
-            </header>
+        <div class="nav-left">
+            <a href="index.html" class="brand">
+                <img src="images/letter_j_white.svg" alt="J Logo">
+                <span>MUNCASTER</span>
+            </a>
         </div>
+
+        <nav class="nav-links">
+            <a href="#">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="inner-hamburger">
+            <img src="images/hamburger_menu.png" alt="Menu">
+        </button>
+
+        <div id="inner-mobile-menu">
+            <a href="#">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
 
     <!-- About Me Hero Section -->
         <section id="about" class="full-width-grid-con">
@@ -52,26 +63,27 @@
     <!-- Footer -->
         <footer id="footer-hero">
             <div class="grid-con">
-                <nav id="footer-nav">
-                    <h2 class="hidden">Footer Nav</h2>
-                        <img src="images/" alt="J Logo">
 
-                        <ul>
-                            <li><a class="#">Projects</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                <div id="footer-logo" class="col-span-full">
+                    <img src="images/letter_j_orange.svg" alt="J Logo">
+                </div>
+
+                <nav id="footer-nav" class="col-span-full">
+                    <a href="#">Projects</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
                 </nav>
 
-                <div id="footer-icons">
-                    <img src="images/" alt="Instagram Logo">
-                    <img src="images/" alt="LinkedIn Logo">
-                    <img src="images/" alt="GitHub Logo">
+                <div id="footer-icons" class="col-span-full">
+                    <a href="#"><img src="images/instagram_icon.png" alt="Instagram Logo"></a>
+                    <a href="#"><img src="images/github_logo.png" alt="GitHub Logo"></a>
+                    <a href="#"><img src="images/linkedin_logo.png" alt="LinkedIn Logo"></a>
                 </div>
 
-                <div id="footer-privacy">
-                    <p id="policy">© All Rights Reserved 2025 | Jo Muncaster</p>
+                <div id="footer-privacy" class="col-span-full">
+                    <p>© All Rights Reserved 2025 | Jo Muncaster</p>
                 </div>
+
             </div>
         </footer>
 

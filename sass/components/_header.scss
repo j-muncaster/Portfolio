@@ -1,6 +1,8 @@
 @use '../abstracts';
 
-#main-nav {
+/* Homepage Header */
+
+.home-header {
   position: absolute;
   margin-top: 60px;
   margin-left: 80px;
@@ -48,22 +50,122 @@
   color: #3B3B3B;
 }
 
+/* Inner Header */ 
+
+.inner-header {
+  background-color: #F26430;
+  padding: 15px 60px 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inner-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.inner-header .brand img {
+  height: 70px;
+  width: auto;
+  display: block;
+  margin-right: -55px;
+  margin-left: -20px;
+}
+
+.inner-header .brand span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F2F2F2;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.inner-header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.inner-header .nav-links a {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #F2F2F2;
+  transition: opacity 0.3s ease;
+}
+
+.inner-header .nav-links a:hover {
+  color: #3B3B3B;
+}
+
+#inner-hamburger,
+#inner-mobile-menu {
+  display: none;
+}
+
 @media screen and (max-width: 760px) {
 
-    .nav-links {
-        display: none;
-    }
+  .nav-links {
+    display: none;
+  }
 
-    #hamburger {
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 30px;
-        width: 40px;
-        height: 40px;
-    }
+  #hamburger {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+  }
 
-    #mobile-menu {
-        display: none;
-    }
+  #mobile-menu {
+    display: none;
+  }
+
+  .inner-header .nav-links {
+    display: none;
+  }
+
+  #inner-hamburger {
+    display: block;
+    position: absolute;
+    right: 25px; 
+    top: 30px;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  #inner-mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #DF6E40;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .inner-header .brand span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #F2F2F2;
+    letter-spacing: 1px;
+  }
+
+  .inner-header .brand img {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin-right: -60px;
+    margin-left: -20px;
+  }
 }
