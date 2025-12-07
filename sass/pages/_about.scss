@@ -1,0 +1,123 @@
+@use '../abstracts';
+
+#about {
+    margin-top: 120px;
+    text-align: center;
+    position: relative;
+}
+
+#about .grid-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-layer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: 180px;
+    background-image: url("../images/pattern_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 40px;
+}
+
+#about .background-layer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.profile-photo {
+    position: relative;
+    margin-top: -230px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.profile-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#about h3 {
+    margin-top: 60px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #3B3B3B;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #3B3B3B;
+}
+
+#about p br {
+    margin-bottom: 20px;
+}
+
+#about .button {
+    display: inline-block;
+    margin: 20px auto 80px;
+    padding: 14px 32px;
+    background-color: #DF6E40;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#about .button:hover {
+    background-color: #3B3B3B;
+}
+
+@media screen and (max-width: 760px) {
+
+    #about .background-layer {
+        height: 150px;
+        background-image: url("../images/m_pattern_banner.jpg");
+    }
+
+    #about .background-layer img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .profile-photo img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-photo {
+        background-image: url("../images/m-headshot.jpg");
+    }
+
+    #about h3 {
+        font-size: 26px;
+        margin-top: 150px;
+    }
+
+    #about p {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    #about .button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
