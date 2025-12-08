@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/grid.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Josephine Muncaster's Portfolio</title>
+</head>
+<body>
+    <h1 class="hidden">Contact Me Page</h1>
+
+    <!-- Main Nav -->
+     
+    <header id="main-nav" class="inner-header">
+
+        <div class="nav-left">
+            <a href="index.html" class="brand">
+                <img src="images/letter_j_white.svg" alt="J Logo">
+                <span>MUNCASTER</span>
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="inner-hamburger">
+            <img src="images/hamburger_menu.png" alt="Menu">
+        </button>
+
+        <div id="inner-mobile-menu">
+            <a href="#">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <!-- Contact Me Hero Section -->
+
+        <section id="contact-hero" class="col-span-full">
+            <h2 class="hidden">Contact Me Hero Section</h2>
+            <div class="solid-banner"></div>
+
+            <div class="profile-photo">
+                <img src="images/working_shot.jpg" alt="Photo of Me">
+            </div>
+
+            <div class="col-span-full intro-text">
+                <h3>Designing with Heart,<br>Connecting Through Experience.</h3>
+                <p>Whether you're looking for a thoughtful UX designer, a detail-oriented front-end developer,
+                    or a collaborative partner for your next big idea — I’d love to connect.</p>
+            </div>
+        </section>
+
+
+    <!-- Contact Form -->
+
+        <section id="contact-form-section" class="col-span-full">
+            <h2 class="hidden">Contact Form</h2>
+            <div class="contact-background-layer"></div>
+
+            <p>
+                <?php
+                    if(isset($_GET['msg'])){
+                        echo htmlspecialchars($_GET['msg'], ENT_QUOTES, 'UTF-8');
+                    }
+                ?>
+            </p>
+
+            <div class="contact-form-wrapper">
+                <form action="send.php" method="post">
+                    <div class="name-fields">
+                        <input name="first_name" type="text" required placeholder="First Name">
+                        <input name="last_name" type="text" required placeholder="Last Name">
+                    </div>
+
+                    <input name="email" type="email" required placeholder="Email Address">
+
+                    <textarea name="message" required placeholder="Message"></textarea>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    <!-- Footer -->
+
+        <footer id="footer-hero">
+            <div class="grid-con">
+
+                <div id="footer-logo" class="col-span-full">
+                    <img src="images/letter_j_orange.svg" alt="J Logo">
+                </div>
+
+                <nav id="footer-nav" class="col-span-full">
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div id="footer-icons" class="col-span-full">
+                    <a href="#"><img src="images/instagram_icon.png" alt="Instagram Logo"></a>
+                    <a href="#"><img src="images/github_logo.png" alt="GitHub Logo"></a>
+                    <a href="#"><img src="images/linkedin_logo.png" alt="LinkedIn Logo"></a>
+                </div>
+
+                <div id="footer-privacy" class="col-span-full">
+                    <p>© All Rights Reserved 2025 | Jo Muncaster</p>
+                </div>
+
+            </div>
+        </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
