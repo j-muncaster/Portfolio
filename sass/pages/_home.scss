@@ -29,22 +29,22 @@ html, body {
 
 #hero-logo {
     grid-column: 1 / span 6;
-    width: 750px;
+    width: 950px;
     max-width: 100%;
     z-index: 5;
-    margin-left: 80px;
+    margin-left: 90px;
     margin-bottom: none;
 }
 
 #text-hero {
     grid-column: 1 / span 6;
-    margin-left: 300px;
+    margin-left: 380px;
     margin-top: 20px;
     z-index: 5;
 }
 
 #text-hero p {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
     color: #F26430;
     white-space: nowrap;
@@ -53,7 +53,7 @@ html, body {
 #explore-hero {
     position: relative;
     width: fit-content;
-    margin-left: 380px;
+    margin-left: 500px;
     margin-top: 280px;
     z-index: 5;
     text-align: center;
@@ -61,7 +61,7 @@ html, body {
 }
 
 #explore-hero p {
-    font-size: 28px;
+    font-size: 30px;
     color: #F26430;
     margin-bottom: 10px;
 }
