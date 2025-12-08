@@ -130,8 +130,47 @@
     z-index: 9999;
   }
 
+  #hamburger img {
+    transition: transform 0.3s ease;
+  }
+
+  #hamburger.active img {
+    transform: scale(1.2);
+  }
+
   #mobile-menu {
     display: none;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F2F2F2;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 90px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  #mobile-menu.open {
+    display: flex;
+  }
+
+  #menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    display: none;
+    z-index: 999;
+  }
+
+  #menu-overlay.active {
+    display: block;
+  }
+
+  #mobile-menu a:hover {
+    transform: scale(1.1);
+    color: #F26430;
   }
 
   .inner-header .nav-links {
@@ -141,39 +180,49 @@
   #inner-hamburger {
     display: block;
     position: absolute;
-    right: 25px; 
+    right: 40px; 
     top: 30px;
+    width: 50px;
+    height: 50px;
     background: none;
     border: none;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-  }
+    z-index: 9999;
+    }
 
   #inner-mobile-menu {
     display: none;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: #DF6E40;
-    padding: 20px;
-    border-radius: 8px;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    background-color: #F26430;
+    padding: 20px 30px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    z-index: 9998;
   }
 
-  .inner-header .brand span {
-    font-size: 24px;
+  #inner-mobile-menu a {
+    font-size: 22px;
     font-weight: 700;
+    text-decoration: none;
     color: #F2F2F2;
-    letter-spacing: 1px;
+    transition: transform 0.2s ease, color 0.2s ease;
   }
 
-  .inner-header .brand img {
-    height: 80px;
-    width: auto;
-    display: block;
-    margin-right: -60px;
-    margin-left: -20px;
+  #inner-hamburger.active img {
+    transform: scale(1.2);
+  }
+
+  #inner-mobile-menu.open {
+    display: flex;
+  }
+
+  #inner-mobile-menu a:hover {
+    transform: scale(1.1);
+    color: #3B3B3B;
   }
 }
