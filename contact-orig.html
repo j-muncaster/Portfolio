@@ -61,17 +61,16 @@
         <section id="contact-form-section" class="col-span-full">
             <h2 class="hidden">Contact Form</h2>
             <div class="contact-background-layer"></div>
-
             <div class="contact-form-wrapper">
-                <form action="#" method="post" enctype="text/plain">
+                <form action="send.php" method="post">
                     <div class="name-fields">
-                        <input name="firstName" type="text" required placeholder="First Name">
-                        <input name="lastName" type="text" required placeholder="Last Name">
+                        <input name="first_name" type="text" required placeholder="First Name">
+                        <input name="last_name" type="text" required placeholder="Last Name">
                     </div>
 
-                    <input name="contactInfo" type="text" required placeholder="Email Address">
+                    <input name="email" type="email" required placeholder="Email Address">
 
-                    <textarea name="msg" placeholder="Message"></textarea>
+                    <textarea name="message" required placeholder="Message"></textarea>
 
                     <button type="submit" class="submit-btn">Submit</button>
                 </form>
