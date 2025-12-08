@@ -96,7 +96,7 @@
 #solution-con, 
 #process-con {
     max-width: 900px;
-    margin: 80px auto;
+    margin: 40px auto 20px;
     padding: 0 20px;
 }
 
@@ -107,6 +107,10 @@
     font-weight: 800;
     color: #3B3B3B;
     margin-bottom: 20px;
+}
+
+#process-con h3 {
+    margin-top: 50px;
 }
 
 #challenge-con h4,
