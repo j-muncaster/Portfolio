@@ -21,7 +21,7 @@ function pauseVideo() {
 
 function stopVideo() {
     player.pause();
-    player.currentTime = 1;
+    player.currentTime = 0;
 }
 
 function changeVolume() {
@@ -51,28 +51,7 @@ pauseButton.addEventListener("click", pauseVideo);
 stopButton.addEventListener("click", stopVideo);
 volumeSlider.addEventListener("change", changeVolume);
 fullScreen.addEventListener("click", toggleFullScreen);
-videoControls.addEventListener("mouse-enter", showControls);
-videoControls.addEventListener("mouse-leave", hideControls);
-player.addEventListener("mouse-enter", showControls);
-player.addEventListener("mouse-leave", hideControls);
-
-
-// LIGHTBOX
-
-const triggers = document.querySelectorAll(".lightbox-trigger");
-const lightbox = document.querySelector("lightbox");
-const lightboxImg = lightbox.querySelector(".lightbox-image");
-const closeBtn = lightbox.querySelector(".close");
-
-triggers.forEach(trigger => {
-    trigger.addEventListener("click", (event) => {
-      event.preventDefault();
-      lightbox.classList.add("active");
-      lightboxImg.src = trigger.src;
-    });
-});
-
-closeBtn.addEventListener("click", () => {
-    lightbox.classList.remove("active");
-    lightboxImg.src = "";
-});
+videoControls.addEventListener("mouseenter", showControls);
+videoControls.addEventListener("mouseleave", hideControls);
+player.addEventListener("mouseenter", showControls);
+player.addEventListener("mouseleave", hideControls);
