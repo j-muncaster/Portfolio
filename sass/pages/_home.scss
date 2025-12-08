@@ -3,6 +3,8 @@ html, body {
     width: 100%;
 }
 
+/* Hero Section */
+
 #hero {
     position: relative;
     background-color: #F2C1AE;
@@ -25,7 +27,6 @@ html, body {
     pointer-events: none;
 }
 
-
 #hero-logo {
     grid-column: 1 / span 6;
     width: 750px;
@@ -38,7 +39,7 @@ html, body {
 #text-hero {
     grid-column: 1 / span 6;
     margin-left: 300px;
-    margin-top: -240px;
+    margin-top: 20px;
     z-index: 5;
 }
 
@@ -50,19 +51,32 @@ html, body {
 }
 
 #explore-hero {
-    grid-column: 1 / span 6;
-    margin-left: 500px;
-    margin-top: 100px;
-    text-align: left;
+    position: relative;
+    width: fit-content;
+    margin-left: 380px;
+    margin-top: 280px;
     z-index: 5;
+    text-align: center;
+    white-space: nowrap;
 }
 
 #explore-hero p {
     font-size: 28px;
     color: #F24F13;
-    margin-top: 250px;
-    margin-bottom: 15px;
-    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+#hero-arrow {
+    width: 40px;
+    transform: rotate(90deg);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+#hero-arrow:hover {
+    transform: rotate(90deg) scale(1.15);
 }
 
 .explore-inner {
@@ -71,9 +85,71 @@ html, body {
     align-items: center;
 }
 
-#hero-arrow {
-    width: 40px;
-    transform: rotate(90deg);
-    margin-top: 10px;
-    margin-left: 400px;
+/* Video Player */
+
+@media (max-width: 768px) {
+
+    /* Hero Section */
+
+    #hero {
+        padding-top: 150px;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #hero-logo {
+        width: 80%;
+        max-width: 550px;
+        margin: 120px auto 0 auto; 
+        display: block;
+    }
+
+    #text-hero {
+        margin: 0 auto 0 220px;
+        text-align: center;
+    }
+
+    #text-hero p {
+        font-size: 20px;
+    }
+
+    #hero-squiggle {
+        position: absolute;
+        margin-top: 20px;
+        margin-right: 80px;
+        width: 700px;
+        max-width: none;
+        overflow: hidden;
+        height: auto;
+        transform: rotate(180deg);
+        opacity: 0.7;
+        z-index: 1;
+    }
+
+    #explore-hero {
+        margin: 350px auto 0 220px;
+        text-align: center;
+        width: fit-content;
+        position: relative;
+    }
+
+    #explore-hero p {
+        font-size: 24px;
+    }
+
+    #hero-arrow {
+        width: 32px;
+        margin: 8px auto 0 auto;
+    }
+
+    #hero-arrow {
+        content: url("../images/orange_arrow.svg");
+        transform: rotate(0deg);
+    }
+
+    #hero-arrow:hover {
+    transform: rotate(0) scale(1.15);
+    }
+
+    /* Video Player */
 }
