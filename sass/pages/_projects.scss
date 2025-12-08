@@ -66,7 +66,7 @@
 .overview-text p {
     font-size: 20px;
     line-height: 1.7;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 .overview-content {
@@ -97,12 +97,13 @@
 #process-con {
     max-width: 900px;
     margin: 80px auto;
+    padding: 0 20px;
 }
 
 #challenge-con h3,
 #solution-con h3,
 #process-con h3 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 800;
     color: #3B3B3B;
     margin-bottom: 20px;
@@ -111,7 +112,7 @@
 #challenge-con h4,
 #solution-con h4,
 #process-con h4 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
     color: #3B3B3B;
     margin-bottom: 20px;
@@ -121,10 +122,10 @@
 #solution-con p,
 #overview-con p,
 #process-con p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.7;
     color: #3B3B3B;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 #overview-con img,
@@ -169,27 +170,158 @@
     font-weight: 700;
 }
 
-.project-link img {
-    width: 32px;
+#also-like-section {
+    max-width: 1100px;
+    margin: 120px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#also-like-section h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #3B3B3B;
+    margin-bottom: 40px;
+}
+
+.also-like-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.also-like-card {
+    background: #F26430;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.also-like-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.you-may-like-title {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 800;
+    color: #3B3B3B;
+    margin-bottom: 24px;
+}
+
+.card-info h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card-info img.like-arrow {
+    width: 20px;
+    height: auto;
+}
+
+.also-like-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px #3B3B3B;
 }
 
 @media screen and (max-width: 760px) {
 
     .overview-header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 12px;
     }
 
     .project-number {
-        font-size: 150px;
+        font-size: 120px;
+        margin-left: 0;
         line-height: 0.8;
+    }
+
+    .title-block {
+        margin-bottom: 20px;
+        padding-top: 6px;
     }
 
     .overview-content {
         grid-template-columns: 1fr;
+        margin-top: 20px;
     }
 
-    .overview-details {
+    .overview-image img {
+        margin: 16px 0 -40px 0 !important;
+    }
+
+    .overview-text h3 {
+        margin-top: 30px;
+    }
+
+    #overview-con h2 {
+        font-size: 28px;
+        line-height: 1.1;
+        margin-top: 0;
+        padding-top: 4px;
+    }
+
+    .overview-text p {
+        margin-bottom: 8px;
+    }
+
+    #challenge-con h3,
+    #solution-con h3,
+    #process-con h3 {
+        font-size: 28px;
+    }
+
+    #challenge-con p,
+    #solution-con p,
+    #overview-con p,
+    #process-con p {
+        font-size: 18px;
+    }
+
+    #challenge-con {
+        margin-top: -20px;
+    }
+
+    #solution-con {
+        margin-bottom: -50px;
+    }
+
+    #process-con h3 {
         margin-top: 20px;
+    }
+
+    #also-like-section {
+        margin-top: 5px;
+    }
+
+    .also-like-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .also-like-card {
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .card-info {
+        padding: 14px 16px;
     }
 }
