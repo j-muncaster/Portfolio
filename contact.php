@@ -22,6 +22,7 @@
         </div>
 
         <nav class="nav-links">
+            <h2 class="hidden">Main Nav</h2>
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -96,6 +97,7 @@
                 </div>
 
                 <nav id="footer-nav" class="col-span-full">
+                    <h2 class="hidden">Footer Nav</h2>
                     <a href="projects.html">Projects</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
