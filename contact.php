@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1 class="hidden">Contact Me Page</h1>
+    <!-- http://localhost:8888/portfolio/contact.php -->
 
     <!-- Main Nav -->
      
@@ -24,7 +25,7 @@
         <nav class="nav-links">
             <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
         </nav>
 
         <button id="inner-hamburger">
@@ -32,9 +33,9 @@
         </button>
 
         <div id="inner-mobile-menu">
-            <a href="#">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
         </div>
     </header>
 
@@ -63,15 +64,17 @@
             <div class="contact-background-layer"></div>
 
             <p>
-                <?php
-                    if(isset($_GET['msg'])){
-                        echo htmlspecialchars($_GET['msg'], ENT_QUOTES, 'UTF-8');
-                    }
-                ?>
+                <div class="form-message-wrapper">
+                    <?php if(isset($_GET['msg'])): ?>
+                        <div class="form-message">
+                            <?= htmlspecialchars($_GET['msg'], ENT_QUOTES, 'UTF-8'); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </p>
 
             <div class="contact-form-wrapper">
-                <form action="send.php" method="post">
+                <form action="includes/send.php" method="post">
                     <div class="name-fields">
                         <input name="first_name" type="text" required placeholder="First Name">
                         <input name="last_name" type="text" required placeholder="Last Name">
@@ -98,7 +101,7 @@
                 <nav id="footer-nav" class="col-span-full">
                     <a href="projects.html">Projects</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.php">Contact</a>
                 </nav>
 
                 <div id="footer-icons" class="col-span-full">

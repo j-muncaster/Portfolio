@@ -67,11 +67,11 @@
 
         if($sent) {
             $thankyou = urlencode("Your message won’t disappear into the void — I promise. I’ll get back to you soon (likely with coffee in hand).");
-            header("Location: contact.php?msg=$thankyou");
+            header("Location: ../contact.php?msg=$thankyou");
             exit();
         } else {
             $thankyou = urlencode("Sorry your message was not sent! Please try again later.");
-            header("Location: contact.php?msg=$thankyou");
+            header("Location: ../contact.php?msg=$thankyou");
             exit();
         }
 
