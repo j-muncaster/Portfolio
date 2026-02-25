@@ -52,7 +52,7 @@
 
             <div class="col-span-full intro-text">
                 <h3>Designing with Heart,<br>Connecting Through Experience.</h3>
-                <p>Whether you're looking for a thoughtful UX designer, a detail-oriented front-end developer,
+                <p>Whether you're looking for graphic design, branding, motion graphics, visual storytelling, 
                     or a collaborative partner for your next big idea — I’d love to connect.</p>
             </div>
         </section>
