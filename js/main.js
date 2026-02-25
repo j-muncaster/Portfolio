@@ -1,18 +1,16 @@
-(() => {
+import { aboutAnimation } from "./modules/about-animations.js";
+import { burgerMenu } from "./modules/burger-menu.js";
+import { burgerSubMenu } from "./modules/burger-sub-menu.js";
+import { contactAnimation } from "./modules/contact-animations.js";
+import { heroAnimation } from "./modules/hero-animation.js";
+import { projectAnimation } from "./modules/project-animations.js";
+import { scrollTo } from "./modules/scroll-to.js";
+import { videoPlayer } from "./modules/video-player.js";
 
-    import { aboutAnimation } from "./modules/about-animations.js";
-    import { burgerMenu } from "./modules/burger-menu.js";
-    import { burgerSubMenu } from "./modules/burger-sub-menu.js";
-    import { contactAnimation } from "./modules/contact-animations.js";
-    import { heroAnimation } from "./modules/hero-animation.js";
-    import { projectAnimation } from "./modules/project-animations.js";
-    import { scrollTo } from "./modules/scroll-to.js";
-    import { videoPlayer } from "./modules/video-player.js";
-
-    // All pages use burger
+// ALL PAGES
     scrollTo();
 
-    // Page loading logic
+// PAGE SPECIFIC
     if(document.body.dataset.page === "home") {
         burgerMenu();
         heroAnimation();
@@ -27,5 +25,3 @@
         burgerSubMenu();
         projectAnimation();
     }
-
-})();
