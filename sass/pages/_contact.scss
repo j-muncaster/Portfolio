@@ -54,7 +54,7 @@
 
 #contact-form-section .contact-background-layer {
     width: 100vw;
-    height: 600px;
+    height: 800px;
     background-image: url("../images/pattern_bg_form.jpg");
     background-size: cover;
     background-position: center;
@@ -66,37 +66,40 @@
 
 .contact-form-wrapper {
     width: 100%;
-    max-width: 700px;
-    margin: -600px auto 0 auto;
+    max-width: 1000px;
+    margin: -750px auto 0 auto;
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 10;
 }
 
-.name-fields {
-    display: flex;
-    gap: 20px;
-    width: 100%;
+form {
+    width: 90%;
+    max-width: 900px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+form label {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 12px;
+    display: block;
+    background-color: rgba(242, 100, 48, 0.6);
+    padding: 12px;
+    border-radius: 12px;  
 }
 
 form input,
 form textarea {
     width: 100%;
-    padding: 16px 20px;
+    padding: 20px 24px;
     font-size: 20px;
-    border: none;
-    border-radius: 10px;
+    border-radius: 16px;
     background: #ffffff;
-    box-shadow: 0 4px 20px  #3b3b3b;
-    font-family: inherit;
-    color: #3B3B3B;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 form textarea {
@@ -149,9 +152,25 @@ form textarea::placeholder {
     line-height: 1.5;
 }
 
+#contact-form-section #feedback {
+    color: #3B3B3B;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 60px;
+    margin-bottom: 0;
+
+    background-color: rgba(242, 100, 48, 0.6);
+    padding: 12px;
+    padding-bottom: 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
 @media screen and (max-width: 760px) {
     #contact-form-section .contact-background-layer {
-        height: 550px;
+        height: 700px;
         background-image: url("../images/m_pattern_bg_form.jpg");
         background-size: cover;
         background-position: center;
@@ -167,6 +186,10 @@ form textarea::placeholder {
 
     #contact-form-section {
         padding-bottom: 150px;
+    }
+
+    .contact-form-wrapper {
+        margin: -660px auto 0 auto;
     }
     
     #contact-hero .profile-photo {
@@ -187,9 +210,6 @@ form textarea::placeholder {
 
     form {
         width: 80%;
-    }
-
-    .name-fields {
         flex-direction: column;
         gap: 16px;
     }
