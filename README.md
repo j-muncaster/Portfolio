@@ -1,4 +1,4 @@
-# The Portfolio of Jo Muncaster - UX | UI Designer & Front End Developer 💻
+# The Portfolio of Jo Muncaster - Graphic & Motion Designer 💻
 
 This portfolio showcases my work as a graphic and motion designer, highlighting projects that combine user-centered design with storytelling. This site demonstrates my ability to create intuitive, visually appealing interfaces across devices while presenting my design process and technical skills to potential employers.
 
