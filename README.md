@@ -1,6 +1,6 @@
 # The Portfolio of Jo Muncaster - UX | UI Designer & Front End Developer 💻
 
-This portfolio showcases my work as a UX/UI designer and front-end developer, highlighting projects that combine user-centered design with clean, responsive code. This site demonstrates my ability to create intuitive, visually appealing interfaces across devices while presenting my design process and technical skills to potential employers.
+This portfolio showcases my work as a graphic and motion designer, highlighting projects that combine user-centered design with storytelling. This site demonstrates my ability to create intuitive, visually appealing interfaces across devices while presenting my design process and technical skills to potential employers.
 
 ## Table of Contents 📋
 [About](#about)<br/>
@@ -15,7 +15,7 @@ This portfolio showcases my work as a UX/UI designer and front-end developer, hi
 
 ## About 🌼 <a id="about"></a>
 
-I’m a Filipina-Canadian UX/UI Designer and Front-End Developer passionate about clean design, code, and human-centered solutions. I thrive at the intersection of logic and creativity, crafting responsive interfaces and intuitive user flows with care and precision. Outside of work, I love exploring new trails, diving into a good book, or immersing myself in video games — always bringing curiosity and heart to everything I do.
+I’m a Filipina-Canadian Graphic & Motion Designer passionate about clean design, code, and human-centered solutions. I thrive at the intersection of logic and creativity, crafting responsive interfaces and intuitive user flows with care and precision. Outside of work, I love exploring new trails, diving into a good book, or immersing myself in video games — always bringing curiosity and heart to everything I do.
 
 ## Skills ✒️ <a id="skills"></a>
 Languages : HTML5, CSS3, Javascript
