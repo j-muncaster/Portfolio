@@ -7,9 +7,6 @@ import { projectAnimation } from "./modules/project-animations.js";
 import { scrollTo } from "./modules/scroll-to.js";
 import { splitText } from "./modules/split-text.js";
 import { videoPlayer } from "./modules/video-player.js";
-import { splitText } from "./modules/split-text.js";
-import { ScrambleTextPlugin } from "./ScrambleTextPlugin.js";
-import { SplitText } from "./SplitText.js";
 
 // ALL PAGES
     scrollTo();
@@ -18,8 +15,6 @@ import { SplitText } from "./SplitText.js";
     if(document.body.dataset.page === "home") {
         burgerMenu();
         splitText();
-        ScrambleTextPlugin();
-        SplitText();
         heroAnimation();
         videoPlayer();
     }else if(document.body.dataset.page === "contact"){
