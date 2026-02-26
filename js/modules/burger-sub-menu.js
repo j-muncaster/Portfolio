@@ -1,5 +1,5 @@
-// INNER HAMBURGER MENU (Subpages)
 export function burgerSubMenu() {
+
     const innerHamburger = document.querySelector("#inner-hamburger");
     const innerMobileMenu = document.querySelector("#inner-mobile-menu");
 
