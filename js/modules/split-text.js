@@ -1,7 +1,9 @@
 import { SplitText } from "../SplitText.js";
+import { ScrambleTextPlugin } from "../ScrambleTextPlugin.js";
 
 export function splitText() {
   gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrambleTextPlugin);
 
   const skills = document.querySelectorAll('.skills');
 

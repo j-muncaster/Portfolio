@@ -1,4 +1,4 @@
-(()=>{
+export function contactForm() {
 	
     const form = document.querySelector("#contactForm");
     const feedBack = document.querySelector("#feedback");
@@ -57,4 +57,4 @@
 
     form.addEventListener("submit", regForm);
 
-})();
+}
