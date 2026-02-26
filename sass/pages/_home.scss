@@ -38,9 +38,10 @@ html, body {
 
 #text-hero {
     grid-column: 1 / span 6;
-    margin-left: 380px;
-    margin-top: 20px;
+    margin-left: -580px;
+    margin-top: -20px;
     z-index: 5;
+    text-align: center;
 }
 
 #text-hero p {
@@ -48,6 +49,15 @@ html, body {
     font-weight: 700;
     color: #F26430;
     white-space: nowrap;
+}
+
+.skills {
+    position: absolute;
+    width: 100%; 
+    opacity: 0; 
+    visibility: hidden;
+    top: 50px;
+    left: 0;
 }
 
 #explore-hero {
@@ -206,7 +216,8 @@ html, body {
     }
 
     #text-hero p {
-        font-size: 20px;
+        font-size: 32px;
+        text-align: center;
     }
 
     #hero-squiggle {
