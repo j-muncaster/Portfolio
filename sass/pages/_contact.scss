@@ -96,6 +96,7 @@ form input,
 form textarea {
     width: 100%;
     padding: 20px 24px;
+    font-family: inherit; 
     font-size: 20px;
     border-radius: 16px;
     background: #ffffff;
@@ -120,12 +121,12 @@ form textarea::placeholder {
     border: none;
     padding: 14px 40px;
     font-family: inherit;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 500;
     border-radius: 8px;
     cursor: pointer;
-    margin: 10px auto 0;
     display: block;
+    margin: 60px auto 0;
     transition: 0.3s ease, transform 0.2s ease;
 }
 
@@ -153,14 +154,13 @@ form textarea::placeholder {
 }
 
 #contact-form-section #feedback {
-    color: #3B3B3B;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-top: 60px;
-    margin-bottom: 0;
-
+    margin-bottom: 0px;
     background-color: rgba(242, 100, 48, 0.6);
     padding: 12px;
     padding-bottom: 0;
