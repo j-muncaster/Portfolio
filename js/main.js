@@ -6,7 +6,7 @@ import { contactForm } from "./modules/contact-form.js";
 import { heroAnimation } from "./modules/hero-animation.js";
 import { projectAnimation } from "./modules/project-animations.js";
 import { scrollTo } from "./modules/scroll-to.js";
-import { heroText } from "../SplitText.js";
+import { splitText } from "./modules/split-text.js";
 import { videoPlayer } from "./modules/video-player.js";
 
 // ALL PAGES
@@ -15,7 +15,7 @@ import { videoPlayer } from "./modules/video-player.js";
 // PAGE SPECIFIC
     if(document.body.dataset.page === "home") {
         burgerMenu();
-        heroText();
+        splitText();
         heroAnimation();
         videoPlayer();
     }else if(document.body.dataset.page === "contact"){

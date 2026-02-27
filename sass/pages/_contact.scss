@@ -80,14 +80,14 @@ form {
 }
 
 form label {
-    color: #3b3b3b;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-top: 12px;
     display: block;
-    background-color: #F2C1AE;
+    background-color: rgba(242, 100, 48, 0.6);
     padding: 12px;
     border-radius: 12px;  
 }
@@ -142,13 +142,12 @@ form textarea::placeholder {
 }
 
 .form-message {
-    font-family: 'League Spartan', sans-serif;
     color: #3b3b3b;
     padding: 16px 20px;
     border-radius: 8px;
     max-width: 700px;
     margin: 20px auto;
-    font-size: 24px;
+    font-size: 1rem;
     text-align: center;
     line-height: 1.5;
 }
@@ -162,7 +161,7 @@ form textarea::placeholder {
     margin-top: 60px;
     margin-bottom: 0;
 
-    background-color: #F2C1AE;
+    background-color: rgba(242, 100, 48, 0.6);
     padding: 12px;
     padding-bottom: 0;
     border-radius: 12px;
