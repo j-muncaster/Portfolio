@@ -42,7 +42,7 @@ $projects = $database->query(
 <header id="main-nav" class="inner-header">
 
     <div class="nav-left">
-        <a href="../index.html" class="brand">
+        <a href="../index.php" class="brand">
             <img src="../images/letter_j_white.svg" alt="J Logo">
             <span>MUNCASTER</span>
         </a>
