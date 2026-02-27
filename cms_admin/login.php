@@ -1,36 +1,37 @@
 <?php
+use Portfolio\Database;
+
 session_start();
 
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio\\', '', $class);
-    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class); # needed for both
-    $filepath = __DIR__ . '/../../includes/classes/' . $class . '.php';
+    $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
+    $filepath = __DIR__ . '/../includes/' . $class . '.php';
     
     require_once $filepath;
 });
 
-use Portfolio\Database;
-
 $database = new Database();
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-$results = $database->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
-$user = $results[0] ?? null;
+    $results = $database->query('SELECT * FROM users WHERE username = :username', ['username' => $username]);
+    $user = $results[0] ?? null;
 
-$passwordMatches = password_verify($password, $user['password']);
+    $passwordMatches = $user && password_verify($password, $user['password']);
 
-if ($passwordMatches) {
-    $_SESSION['logged_in_user'] = $user;
-    header('Location: /dashboard.php');
-    exit;
-} else {
-    // set some error messages
-    $_SESSION['error_messages'] = [];
-    $_SESSION['error_messages']['login'] = "error $password";
-    header('Location: /Portfolio/login.php');
-    exit;
+    if ($passwordMatches) {
+        $_SESSION['logged_in_user'] = $user;
+        header('Location: /Portfolio/cms_admin/dashboard.php');
+        exit();
+    } else {
+        $_SESSION['error_messages'] = [];
+        $_SESSION['error_messages']['login'] = 'Invalid username or password';
+        header('Location: login.php');
+        exit();
+    }
 }
 ?>
 
@@ -43,20 +44,15 @@ if ($passwordMatches) {
 </head>
 <body>
     <h2 class="hidden">Login Page</h2>
-        <form id="contactForm" method="POST" action="login.php">
+        <form id="loginForm" method="POST" action="login.php">
             <label for="username">Username</label>
             <input id="username" name="username" type="text" required>
 
             <label for="password">Password</label>
-            <input id="password" name="password" type="text" required>
+            <input id="password" name="password" type="password" required>
 
             <button type="submit" class="submit-btn">Sign In</button>
         </form>
 </body>
 </html>
 
-<?php
-$_SESSION['error_messages'] = [];
-$_SESSION['error_messages']['login']= "error!";
-header('Location: login.php');
-?>
