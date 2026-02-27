@@ -1,8 +1,8 @@
 <?php
-    $db_host = 'localhost:8888';
+    $db_host = 'localhost:8889';
     $db_user = 'root';
     $db_pass = 'root';
-    $db_name = 'user_form_DB';
+    $db_name = 'portfolio';
 
     $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     $errors = array();
@@ -23,7 +23,7 @@
     }
 
     $message = mysqli_real_escape_string($connection, $_POST['message']);
-    if ($city == NULL) {
+    if ($message == NULL) {
         $errors[] = "Message field is empty.";
     }
 
