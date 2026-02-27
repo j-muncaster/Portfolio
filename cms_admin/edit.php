@@ -95,6 +95,7 @@ if (!$project) {
 </header>
 
 <section id="about" class="col-span-full">
+    <div class="background-layer"></div>
 
     <div class="grid-con">
         <h3>Edit Project</h3>
