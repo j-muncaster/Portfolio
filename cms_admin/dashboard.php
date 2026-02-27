@@ -42,7 +42,7 @@ $projects = $database->query(
 <header id="main-nav" class="inner-header">
 
     <div class="nav-left">
-        <a href="../index.php" class="brand">
+        <a href="../index.html" class="brand">
             <img src="../images/letter_j_white.svg" alt="J Logo">
             <span>MUNCASTER</span>
         </a>
@@ -56,9 +56,9 @@ $projects = $database->query(
 </header>
 
 <section id="about" class="col-span-full">
+    <div class="background-layer"></div>
 
     <div class="grid-con">
-
         <div class="dashboard-topbar">
             <h3>CMS Portfolio Dashboard</h3>
         </div>
@@ -94,10 +94,15 @@ $projects = $database->query(
                     <td><?= htmlspecialchars($project['process']); ?></td>
                     <td><?= htmlspecialchars($project['impact_and_outcomes']); ?></td>
                     <td class="dashboard-actions">
-                        <a href="edit.php?id=<?= (int)$project['projects_id']; ?>">Edit</a>
+                        <a href="edit.php?id=<?= (int)$project['projects_id']; ?>" 
+                        class="action-btn edit-btn">
+                        Edit
+                        </a>
+
                         <a href="delete.php?id=<?= (int)$project['projects_id']; ?>"
-                           onclick="return confirm('Are you sure?');">
-                           Delete
+                        class="action-btn delete-btn"
+                        onclick="return confirm('Are you sure you want to delete this project?');">
+                        Delete
                         </a>
                     </td>
                 </tr>

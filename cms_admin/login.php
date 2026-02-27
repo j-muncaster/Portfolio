@@ -69,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </header>
 
 <section id="about" class="col-span-full">
+    <div class="background-layer"></div>
 
     <div class="grid-con">
         <h3>CMS Dashboard Login</h3>
