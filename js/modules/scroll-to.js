@@ -17,5 +17,5 @@ export function scrollTo() {
     }
 
 // GSAP PAGE ANIMATIONS
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    gsap.registerPlugin(ScrollTrigger);
 }
