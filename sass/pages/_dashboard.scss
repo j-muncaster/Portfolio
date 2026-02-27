@@ -1,0 +1,217 @@
+@use '../abstracts';
+    
+.dashboard-wrapper {
+    margin: 40px;
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.dashboard-table th {
+    background: #F2C1AE;
+    color: #000;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.dashboard-table td {
+    padding: 14px;
+    border-bottom: 1px solid #3B3B3B;
+    border-right: 1px solid #3B3B3B;
+    vertical-align: top;
+}
+
+.dashboard-table td:last-child,
+.dashboard-table th:last-child {
+    border-bottom: none;
+    border-right: none;
+}
+
+.dashboard-table tr:hover {
+    background: #faf7f5;
+}
+
+.dashboard-actions a {
+    margin-right: 10px;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.dashboard-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-topbar h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-btn {
+    padding: 8px 14px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: opacity 0.2s ease;
+}
+
+.dashboard-btn:hover {
+    opacity: 0.8;
+}
+
+.dashboard-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.header-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.add-btn {
+    color: black;
+}
+
+.add-btn:hover {
+    opacity: 0.85;
+}
+
+.logout-btn {
+    color: black;
+    background: transparent;
+}
+
+.logout-btn:hover {
+    color: black;
+}
+
+#about .dashboard-form label {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.dashboard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin-top: 30px;
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ffff;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #F2C1AE;
+  }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #F26430;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #3B3B3B;
+}
+
+.delete-btn {
+    background-color: #F26430;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #3B3B3B;
+}
+
+@media (max-width: 768px) {
+  .dashboard-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard-wrapper {
+    margin: 20px;
+  }
+
+  .dashboard-table {
+    font-size: 14px;
+    min-width: 900px;
+  }
+
+  .dashboard-table th,
+  .dashboard-table td {
+    padding: 10px;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .dashboard-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
