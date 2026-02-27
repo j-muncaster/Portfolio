@@ -76,10 +76,10 @@ $projects = $database->query(
                     <th>Title</th>
                     <th>Overview</th>
                     <th>Duration</th>
-                    <th>Tools</th>
+                    <th>Tools & Skills</th>
                     <th>Role</th>
                     <th>Process</th>
-                    <th>Impact</th>
+                    <th>Impact & Outcomes</th>
                     <th>Actions</th>
                 </tr>
 
@@ -89,7 +89,7 @@ $projects = $database->query(
                     <td><?= htmlspecialchars($project['title']); ?></td>
                     <td><?= htmlspecialchars($project['overview']); ?></td>
                     <td><?= htmlspecialchars($project['duration']); ?></td>
-                    <td><?= htmlspecialchars($project['tools_skills']); ?></td>
+                    <td><?= htmlspecialchars($project['tools_and_skills']); ?></td>
                     <td><?= htmlspecialchars($project['role']); ?></td>
                     <td><?= htmlspecialchars($project['process']); ?></td>
                     <td><?= htmlspecialchars($project['impact_and_outcomes']); ?></td>
