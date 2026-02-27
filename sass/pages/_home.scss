@@ -197,6 +197,15 @@ html, body {
     transform: translateX(6px);
 }
 
+.project-link .arrow {
+    stroke: white;
+    transition: 0.3s ease;
+}
+
+.project-link:hover .arrow {
+    stroke: #3b3b3b;
+}
+
 @media (max-width: 768px) {
 
     /* Hero Section */
