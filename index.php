@@ -64,17 +64,20 @@ $result = mysqli_query($connection, $query);
             <h2 class="hidden">Portfolio Hero Section</h2>
 
             <img src="images/squiggle-2.svg" id="hero-squiggle" alt="Decorative Shape">
-            <img src="images/logo-colour.svg" alt="Jo Muncaster Logo" id="hero-logo">
 
-            <div id="text-hero">
-                <p class="skills">Graphic Designer</p>
-                <p class="skills">Motion Designer</p>
-                <p class="skills">Web Designer</p>
-            </div>
+            <div id="hero-content">
+                <img src="images/logo-colour.svg" alt="Jo Muncaster Logo" id="hero-logo">
 
-            <div id="explore-hero">
-                <p>Explore my projects</p>
-                <img src="images/white_arrow.svg" id="hero-arrow" alt="Arrow Icon">
+                <div id="text-hero">
+                    <p class="skills">Graphic Designer</p>
+                    <p class="skills">Motion Designer</p>
+                    <p class="skills">Web Designer</p>
+                </div>
+
+                <div id="explore-hero">
+                    <p>Explore my projects</p>
+                    <img src="images/white_arrow.svg" id="hero-arrow" alt="Arrow Icon">
+                </div>
             </div>
         </section>
 
