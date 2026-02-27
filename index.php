@@ -1,3 +1,11 @@
+<?php 
+$connection = mysqli_connect('localhost', 'root', 'root', 'portfolio', 8889);
+
+$query = "SELECT * FROM tbl_projects ORDER BY projects_id ASC";
+$result = mysqli_query($connection, $query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,13 +46,13 @@
 
             <nav class="nav-links">
                 <h2 class="hidden">Main Nav</h2>
-                <a href="projects.html">Projects</a>
+                <a href="#project-scroll" class="scroll-projects">Projects</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </nav>
 
             <div id="mobile-menu">
-                <a href="projects.html">Projects</a>
+                <a href="#project-scroll" class="scroll-projects">Projects</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -102,65 +110,31 @@
 
     <!-- Projects Section -->
 
-        <section id="project-scroll" class="projects">
-            <h2 class="hidden">Projects Section</h2>
+        <section id="project-scroll">
+            <div class="projects">
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
-            <a href="" class="project-card">
-                <div class="project-image">
-                    <img src="images/cr_homepage.jpg" alt="Photo of Project 1">
-                    <span class="project-numbers">1</span>
-                </div>
+                    <a class="project-card"
+                    href="projects.php?projects_id=<?php echo $row['id']; ?>"
+                    aria-label="View <?php echo $row['title']; ?> project">
 
-                <div class="project-info">
-                    <h3>Couples Resort Redesign</h3>
-                        <p>A full redesign of an existing website, completed by following a provided brand direction to create new page layouts in Figma and coded using HTML5 and CSS.</p>
-                        <img src="images/white_arrow.svg" alt="Arrow Icon">
-                </div>
-            </a>
+                        <div class="project-image">
+                            <img src="images/<?php echo $row['image']; ?>" 
+                                alt="<?php echo $row['title']; ?>">
+                        </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images//orbitz_homepage.jpg" alt="Photo of Project 2">
-                    <span class="project-numbers">2</span>
-                </div>
+                        <div class="project-content">
+                            <h3><?php echo $row['title']; ?></h3>
+                            <p><?php echo $row['description']; ?></p>
 
-                <div class="project-info">
-                    <h3>Orbitz Drink Website</h3>
-                        <p>A modern rebrand and responsive website for Orbitz, featuring a fresh visual identity, redesigned packaging, and a playful, wellness-driven user experience.</p>
-                    <a href="projects.html" class="project-link">
-                        <img src="images/white_arrow.svg" alt="Arrow Icon">
+                            <div class="project-arrow">
+                                <img src="images/white_arrow.svg" alt="">
+                            </div>
+                        </div>
+
                     </a>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/earbuds_homepage.jpg" alt="Photo of Project 3">
-                    <span class="project-numbers num-3">3</span>
-                </div>
-
-                <div class="project-info">
-                    <h3>Elo Earbuds Website</h3>
-                        <p>A product-driven website showcasing a pair of earbuds I designed and 3D-modelled. The project includes custom graphics, posters, and motion assets, all integrated into a clean promotional site.</p>
-                    <a href="#" class="project-link">
-                        <img src="images/white_arrow.svg" alt="Arrow Icon">
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/music_homepage.jpg" alt="Photo of Project 4">
-                    <span class="project-numbers">4</span>
-                </div>
-
-                <div class="project-info">
-                    <h3>Zen Garden Music Mixer</h3>
-                        <p>A zen-themed interactive music mixer where users can drag and drop tracks, play and pause audio, adjust volume levels, and reset arrangements. The interface blends calming visuals with JavaScript-powered functionality for an engaging experience.</p>
-                    <a href="#" class="project-link">
-                        <img src="images/white_arrow.svg" alt="Arrow Icon">
-                    </a>
-                </div>
+                <?php } ?>
             </div>
         </section>
 
@@ -170,20 +144,22 @@
             <div class="grid-con">
 
                 <div id="footer-logo" class="col-span-full">
-                    <img src="images/letter_j_orange.svg" alt="J Logo">
+                    <a href="index.php">
+                        <img src="images/letter_j_orange.svg" alt="Orange Logo Wordmark">
+                    </a>
                 </div>
 
                 <nav id="footer-nav" class="col-span-full">
                     <h2 class="hidden">Footer Nav</h2>
-                    <a href="projects.html">Projects</a>
+                    <a href="#project-scroll" class="scroll-projects">Projects</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                 </nav>
 
                 <div id="footer-icons" class="col-span-full">
-                    <a href="#"><img src="images/instagram_icon.png" alt="Instagram Logo"></a>
-                    <a href="#"><img src="images/github_logo.png" alt="GitHub Logo"></a>
-                    <a href="#"><img src="images/linkedin_logo.png" alt="LinkedIn Logo"></a>
+                    <a href="https://www.instagram.com/jo.muncaster/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram Logo"></a>
+                    <a href="https://github.com/j-muncaster" target="_blank"><img src="images/github_logo.png" alt="GitHub Logo"></a>
+                    <a href="https://www.linkedin.com/in/josephine-muncaster-382674135/" target="_blank"><img src="images/linkedin_logo.png" alt="LinkedIn Logo"></a>
                 </div>
 
                 <div id="footer-privacy" class="col-span-full">
