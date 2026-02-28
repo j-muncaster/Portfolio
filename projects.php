@@ -55,7 +55,7 @@ foreach ($projectImages as $image) {
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body data-page="project">
 
 <header id="main-nav" class="inner-header">
     <div class="nav-left">
