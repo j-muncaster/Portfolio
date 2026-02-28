@@ -17,7 +17,6 @@ $projectStmt = $connection->prepare("
 
 $projectStmt->bindParam(':id', $id);
 $projectStmt->execute();
-
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$project) {
@@ -28,7 +27,6 @@ $imageStmt = $connection->prepare("
     SELECT * FROM tbl_images
     WHERE projects_id = :id
 ");
-
 $imageStmt->bindParam(':id', $id);
 $imageStmt->execute();
 
@@ -38,9 +36,11 @@ $heroImage = null;
 $galleryImages = [];
 
 foreach ($projectImages as $image) {
-    if ($image['image_type'] === 'hero') {
+    if ($image['type'] === 'hero') {
         $heroImage = $image;
-    } else {
+    }
+
+    if ($image['type'] === 'project') {
         $galleryImages[] = $image;
     }
 }
@@ -58,7 +58,6 @@ foreach ($projectImages as $image) {
 <body>
 
 <header id="main-nav" class="inner-header">
-
     <div class="nav-left">
         <a href="index.php" class="brand">
             <img src="images/letter_j_white.svg" alt="J Logo">
@@ -71,46 +70,31 @@ foreach ($projectImages as $image) {
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </nav>
-
-    <button id="inner-hamburger">
-        <img src="images/hamburger_menu.png" alt="Menu">
-    </button>
-
-    <div id="inner-mobile-menu">
-        <a href="index.php#project-scroll">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </div>
-
 </header>
 
 <section id="project-hero">
 
 <?php if ($heroImage): ?>
     <div class="project-hero-image">
-        <picture>
-            <source media="(min-width: 768px)" 
-                    srcset="images/<?= htmlspecialchars($heroImage['image_lg']); ?>">
-            <img src="images/<?= htmlspecialchars($heroImage['image_sm']); ?>" 
-                 alt="<?= htmlspecialchars($project['title']); ?>">
-        </picture>
+        <img src="images/<?= htmlspecialchars($heroImage['image_lg']); ?>" 
+             alt="<?= htmlspecialchars($project['title']); ?>">
     </div>
 <?php endif; ?>
 
 </section>
 
-<section id="project-content" class="grid-con">
+<section id="project-content">
 
-    <div class="col-span-full project-title">
+    <div class="project-title">
         <h1><?= htmlspecialchars($project['title']); ?></h1>
     </div>
 
-    <div class="col-span-full overview-section">
+    <div class="overview-section">
         <h2>Overview</h2>
         <p><?= nl2br(htmlspecialchars($project['overview'])); ?></p>
     </div>
 
-    <div class="col-span-full project-meta">
+    <div class="project-meta">
 
         <div class="meta-item">
             <h3>Duration</h3>
@@ -131,81 +115,59 @@ foreach ($projectImages as $image) {
 
 </section>
 
-<section id="project-gallery" class="grid-con">
+<section id="project-gallery">
 
-<?php 
-$count = 0;
-foreach ($projectImages as $image): 
-    if ($count >= 4) break;
-?>
+<?php foreach ($galleryImages as $image): ?>
 
-    <div class="gallery-item col-span-6">
-        <picture>
-            <source media="(min-width: 768px)" 
-                    srcset="images/<?= htmlspecialchars($image['image_lg']); ?>">
-            <img src="images/<?= htmlspecialchars($image['image_sm']); ?>" 
-                 alt="<?= htmlspecialchars($project['title']); ?>">
-        </picture>
+    <div class="gallery-item">
+        <img src="images/<?= htmlspecialchars($image['image_lg']); ?>" 
+             alt="<?= htmlspecialchars($project['title']); ?>">
     </div>
 
-<?php 
-$count++;
-endforeach; 
-?>
+<?php endforeach; ?>
 
 </section>
 
-<section id="process-section" class="grid-con">
+<section id="process-section">
 
-    <div class="col-span-full">
-        <h2>The Process</h2>
-        <p><?= nl2br(htmlspecialchars($project['process'])); ?></p>
-    </div>
+    <h2>The Process</h2>
+    <p><?= nl2br(htmlspecialchars($project['process'])); ?></p>
 
 </section>
 
-<section id="impact-section" class="grid-con">
+<section id="impact-section">
 
-    <div class="col-span-full">
-        <h2>Impact & Outcomes</h2>
-        <p><?= nl2br(htmlspecialchars($project['impact_and_outcomes'])); ?></p>
-    </div>
+    <h2>Impact & Outcomes</h2>
+    <p><?= nl2br(htmlspecialchars($project['impact_and_outcomes'])); ?></p>
 
 </section>
 
-<footer id="footer-hero">
-    <div class="grid-con">
+<footer id="footer-hero"> 
+    <div class="grid-con"> 
+        <div id="footer-logo" class="col-span-full"> 
+            <a href="index.php"> 
+                <img src="images/letter_j_orange.svg" alt="Orange Logo"> 
+            </a> 
+        </div> 
 
-        <div id="footer-logo" class="col-span-full">
-            <a href="index.php">
-                <img src="images/letter_j_orange.svg" alt="Orange Logo">
-            </a>
-        </div>
-
-        <nav id="footer-nav" class="col-span-full">
-            <a href="index.php#project-scroll">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <div id="footer-icons" class="col-span-full">
-            <a href="https://www.instagram.com/jo.muncaster/" target="_blank">
-                <img src="images/instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://github.com/j-muncaster" target="_blank">
-                <img src="images/github_logo.png" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/josephine-muncaster-382674135/" target="_blank">
-                <img src="images/linkedin_logo.png" alt="LinkedIn">
-            </a>
-        </div>
-
-        <div id="footer-privacy" class="col-span-full">
-            <p>© All Rights Reserved 2025 | Jo Muncaster</p>
-        </div>
-
-    </div>
-</footer>
-
+        <nav id="footer-nav" class="col-span-full"> 
+            <a href="index.php#project-scroll">Projects</a> 
+            <a href="about.html">About</a> <a href="contact.html">Contact</a> 
+        </nav> 
+        
+        <div id="footer-icons" class="col-span-full"> 
+            <a href="https://www.instagram.com/jo.muncaster/" target="_blank"> 
+                <img src="images/instagram_icon.png" alt="Instagram"> 
+            </a> 
+            <a href="https://github.com/j-muncaster" target="_blank"> 
+                <img src="images/github_logo.png" alt="GitHub"></a> 
+                <a href="https://www.linkedin.com/in/josephine-muncaster-382674135/" target="_blank"> 
+                    <img src="images/linkedin_logo.png" alt="LinkedIn"></a> 
+                </div>
+                <div id="footer-privacy" class="col-span-full"> 
+                    <p>© All Rights Reserved 2025 | Jo Muncaster</p> 
+                </div> 
+            </div> 
+        </footer>
 </body>
 </html>
