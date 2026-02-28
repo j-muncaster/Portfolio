@@ -119,16 +119,25 @@ $result = mysqli_query($connection, $query);
 
                     <a class="project-card"
                     href="projects.php?projects_id=<?php echo $row['id']; ?>"
-                    aria-label="View <?php echo $row['title']; ?> project">
+                    aria-label="View <?php echo htmlspecialchars($row['title']); ?> project">
 
                         <div class="project-image">
-                            <img src="images/<?php echo $row['image']; ?>" 
-                                alt="<?php echo $row['title']; ?>">
+                            <picture>
+                            <!-- Desktop -->
+                            <source 
+                                srcset="<?php echo htmlspecialchars($row['image_lg']); ?>" 
+                                media="(min-width: 768px)">
+
+                            <!-- Mobile -->
+                            <img 
+                                src="<?php echo htmlspecialchars($row['image_sm']); ?>" 
+                                alt="<?php echo htmlspecialchars($row['alt_text']); ?>">
+                        </picture>
                         </div>
 
                         <div class="project-content">
-                            <h3><?php echo $row['title']; ?></h3>
-                            <p><?php echo $row['description']; ?></p>
+                            <h3><?php echo htmlspecialchars($row['title']); ?></h3>
+                            <p><?php echo htmlspecialchars($row['description']); ?></p>
 
                             <div class="project-arrow">
                                 <img src="images/white_arrow.svg" alt="">
