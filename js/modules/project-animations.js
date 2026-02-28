@@ -1,12 +1,11 @@
-// PROJECT PAGE ANIMATIONS
 export function projectAnimation() {
     if (document.querySelector("#project-hero")) {
 
         gsap.utils.toArray("#project-hero p, #challenge-con p, #solution-con p, #process-con p").forEach(p => {
             gsap.from(p, {
                 scrollTrigger: {
-                trigger: p,
-                start: "top 85%",
+                    trigger: p,
+                    start: "top 85%",
                 },
                 opacity: 0,
                 y: 30,
@@ -15,7 +14,7 @@ export function projectAnimation() {
             });
         });
 
-        gsap.utils.toArray('img[src*="orbitz_project_hero.jpg"], img[src*="orbitz_cans.jpg"]').forEach(img => {
+        gsap.utils.toArray("#project-hero img").forEach(img => {
             gsap.from(img, {
                 scrollTrigger: {
                     trigger: img,
@@ -26,7 +25,6 @@ export function projectAnimation() {
                 duration: 1,
                 ease: "power2.out"
             });
-
         });
 
         console.log("Project page animations are working");
