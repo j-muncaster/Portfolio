@@ -1,9 +1,33 @@
 <?php 
-$connection = mysqli_connect('localhost', 'root', 'root', 'portfolio', 8889);
+    $connection = mysqli_connect('localhost', 'root', 'root', 'portfolio', 8889);
 
-$query = "SELECT * FROM tbl_projects ORDER BY projects_id ASC";
-$result = mysqli_query($connection, $query);
+    $query = "SELECT * FROM tbl_projects ORDER BY projects_id ASC";
+    $result = mysqli_query($connection, $query);
 
+    if (!$connection) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $query = "
+    SELECT 
+        p.projects_id,
+        p.title,
+        p.description,
+        i.image_sm,
+        i.image_lg,
+        i.alt_text
+    FROM tbl_projects p
+    JOIN tbl_images i 
+        ON p.projects_id = i.projects_id
+    WHERE i.type = 'thumbnail'
+    ORDER BY p.projects_id ASC
+    ";
+
+    $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($connection));
+    }
 ?>
 
 <!DOCTYPE html>
@@ -118,21 +142,21 @@ $result = mysqli_query($connection, $query);
                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
 
                     <a class="project-card"
-                    href="projects.php?projects_id=<?php echo $row['id']; ?>"
+                    href="projects.php?projects_id=<?php echo $row['projects_id']; ?>"
                     aria-label="View <?php echo htmlspecialchars($row['title']); ?> project">
 
                         <div class="project-image">
                             <picture>
-                            <!-- Desktop -->
-                            <source 
-                                srcset="<?php echo htmlspecialchars($row['image_lg']); ?>" 
-                                media="(min-width: 768px)">
+                                <?php if (!empty($row['image_lg'])) { ?>
+                                    <source 
+                                        media="(min-width: 768px)" 
+                                        srcset="images/<?php echo htmlspecialchars($row['image_lg']); ?>">
+                                <?php } ?>
 
-                            <!-- Mobile -->
-                            <img 
-                                src="<?php echo htmlspecialchars($row['image_sm']); ?>" 
-                                alt="<?php echo htmlspecialchars($row['alt_text']); ?>">
-                        </picture>
+                                <img 
+                                    src="images/<?php echo htmlspecialchars($row['image_sm']); ?>" 
+                                    alt="<?php echo htmlspecialchars($row['alt_text']); ?>">
+                            </picture>
                         </div>
 
                         <div class="project-content">
@@ -143,9 +167,7 @@ $result = mysqli_query($connection, $query);
                                 <img src="images/white_arrow.svg" alt="">
                             </div>
                         </div>
-
                     </a>
-
                 <?php } ?>
             </div>
         </section>
