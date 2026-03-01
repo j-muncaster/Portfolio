@@ -141,3 +141,36 @@
     }
 
 }
+
+@media (max-width: 768px) {
+
+    #project-content,
+    #process-section,
+    #impact-section,
+    #project-gallery {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-title h1 {
+        font-size: 35px;
+    }
+
+    #project-content h2,
+    #process-section h2,
+    #impact-section h2 {
+        font-size: 26px;
+    }
+
+    #project-content p,
+    #process-section p,
+    #impact-section p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .project-meta {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
