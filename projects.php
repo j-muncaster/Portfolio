@@ -53,24 +53,40 @@ foreach ($projectImages as $image) {
     <title><?= htmlspecialchars($project['title']); ?></title>
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body data-page="project">
 
 <header id="main-nav" class="inner-header">
-    <div class="nav-left">
-        <a href="index.php" class="brand">
-            <img src="images/letter_j_white.svg" alt="J Logo">
-            <span>MUNCASTER</span>
-        </a>
-    </div>
 
-    <nav class="nav-links">
-        <a href="index.php#project-scroll">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+        <div class="nav-left">
+            <a href="index.php" class="brand">
+                <img src="images/letter_j_white.svg" alt="J Logo">
+                <span>MUNCASTER</span>
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.php#project-scroll">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="inner-hamburger">
+            <img src="images/hamburger_menu.png" alt="Menu">
+        </button>
+
+        <div id="inner-mobile-menu">
+            <a href="index.php#project-scroll">Projects</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
 
 <section id="project-hero">
 
