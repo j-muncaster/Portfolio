@@ -1,10 +1,5 @@
 <?php
-    header("Content-Type: application/json");
-
-    $db_host = 'localhost:8889';
-    $db_user = 'root';
-    $db_pass = 'root';
-    $db_name = 'portfolio';
+    $connection = mysqli_connect('localhost', 'root', 'root', 'portfolio', 8889);
 
     $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
     $errors = array();
@@ -24,13 +19,13 @@
         $errors[] = "Email field is empty.";
     }
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "\"" . $email . "\" is not a valid email address.";
+    }
+
     $message = mysqli_real_escape_string($connection, $_POST['message']);
     if ($message == NULL) {
         $errors[] = "Message field is empty.";
-    }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "\"" . $email . "\" is not a valid email address.";
     }
 
     $errcount = count($errors);
@@ -41,7 +36,7 @@
         }
         echo json_encode(array("errors" => $errmsg));
     } else {
-        $querystring = "INSERT INTO tbl_users(user_id,user_lname,user_fname, user_email, user_message) VALUES(NULL,'" . $lname . "','" . $fname . "','" . $email . "','" . $message . "')";
+        $querystring = "INSERT INTO tbl_user(user_fname, user_lname, user_email, user_message) VALUES(NULL,'" . $fname . "','" . $lname . "','" . $email . "','" . $message . "')";
         $qpartner = mysqli_query($connection, $querystring);
         echo json_encode(array("message" => "Email submitted. I look forward to connecting!"));
     }
