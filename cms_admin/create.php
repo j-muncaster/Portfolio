@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    // This section is only accessible by users that can log in and this ensures that :
     if (!isset($_SESSION['logged_in_user'])) {
         header('Location: login.php');
         exit();
@@ -8,6 +9,7 @@
 
     use Portfolio\Database;
 
+    // This section is responsible for connecting to the database and includes an autoloader :
     spl_autoload_register(function ($class) {
         $class = str_replace('Portfolio\\', '', $class);
         $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
@@ -20,6 +22,7 @@
 
     $database = new Database();
 
+    // This section handles the form submission for creating a new project :
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $database->query(

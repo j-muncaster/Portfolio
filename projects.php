@@ -15,6 +15,7 @@ $projectStmt = $connection->prepare("
     WHERE projects_id = :id
 ");
 
+// This section is fetching the project data :
 $projectStmt->bindParam(':id', $id);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
@@ -23,6 +24,7 @@ if (!$project) {
     die("Project not found.");
 }
 
+// This section is fetching the associated images for the project :
 $imageStmt = $connection->prepare("
     SELECT * FROM tbl_images
     WHERE projects_id = :id
@@ -105,6 +107,7 @@ foreach ($projectImages as $image) {
         <h1><?= htmlspecialchars($project['title']); ?></h1>
     </div>
 
+    <!-- nl2br allows for line breaks to be maintained from the database into HTML so they aren't ignored -->
     <div class="overview-section">
         <h2>Overview</h2>
         <p><?= nl2br(htmlspecialchars($project['overview'])); ?></p>

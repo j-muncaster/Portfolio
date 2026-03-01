@@ -3,6 +3,7 @@ use Portfolio\Database;
 
 session_start();
 
+// This section automatically loads in my database :
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
@@ -13,6 +14,7 @@ spl_autoload_register(function ($class) {
 
 $database = new Database();
 
+// This section checks for the form submission :
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
