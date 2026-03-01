@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// This section is only accessible by users that can log in and this ensures that :
 if (!isset($_SESSION['logged_in_user'])) {
     header('Location: login.php');
     exit();
@@ -8,6 +9,7 @@ if (!isset($_SESSION['logged_in_user'])) {
 
 use Portfolio\Database;
 
+// This section connects to the database :
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
@@ -27,6 +29,7 @@ if (!$id) {
     exit();
 }
 
+// This section fetches the project data :
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $database->query(
@@ -101,7 +104,8 @@ if (!$project) {
         <h3>Edit Project</h3>
 
         <form method="POST" class="dashboard-form">
-
+            
+            <!-- This send the form data using POST -->
             <label>Title</label>
             <input type="text" name="title"
                    value="<?= htmlspecialchars($project['title']); ?>" required>

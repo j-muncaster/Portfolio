@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// This section is only accessible by users that can log in and this ensures that :
 if (!isset($_SESSION['logged_in_user'])) {
     header('Location: login.php');
     exit();
@@ -8,6 +9,7 @@ if (!isset($_SESSION['logged_in_user'])) {
 
 use Portfolio\Database;
 
+// This section is responsible for connecting to the database and includes an autoloader :
 spl_autoload_register(function ($class) {
     $class = str_replace('Portfolio\\', '', $class);
     $class = str_replace("\\", DIRECTORY_SEPARATOR, $class);
@@ -63,7 +65,6 @@ $projects = $database->query(
             <h3>CMS Portfolio Dashboard</h3>
         </div>
     </div>
-
         <?php if (empty($projects)): ?>
             <p>No projects found.</p>
         <?php else: ?>
@@ -82,7 +83,7 @@ $projects = $database->query(
                     <th>Impact & Outcomes</th>
                     <th>Actions</th>
                 </tr>
-
+                <!-- This section loops through the results -->
                 <?php foreach ($projects as $project): ?>
                 <tr>
                     <td><?= (int)$project['projects_id']; ?></td>
